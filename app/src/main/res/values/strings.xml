@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Talkative</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="us_string">English(US)</string>
+    <string name="uk_string">English(UK)</string>
+    <string name="french_ca_string">French(Canada)</string>
+    <string name="hindi_string">Hindi(India)</string>
+    <string name="french_string">French</string>
+    <string name="german_string">German</string>
+    <string name="italian_string">Italian</string>
+    <string name="japan_string">Japanese</string>
+    <string name="korean_string">Korean</string>
+
+</resources>

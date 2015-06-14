@@ -1,0 +1,323 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fffaffff"
+    android:id="@+id/linear_main"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabHost">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fffaffff">
+            </TabWidget>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Translate From :"
+                        android:id="@+id/translatefrom"
+                        android:layout_marginTop="20dp" />
+
+                    <Spinner
+                        android:layout_width="199dp"
+                        android:layout_height="38dp"
+                        android:id="@+id/fromSpinner"
+                        android:layout_marginLeft="170dp"
+                        android:layout_marginTop="-30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:ems="10"
+                        android:id="@+id/fromMultiline"
+                        android:minHeight="5dp"
+                        android:scrollbars="vertical"
+                        android:isScrollContainer="false"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Translate To :"
+                        android:id="@+id/translateto"
+                        android:layout_marginTop="40dp" />
+
+                    <Spinner
+                        android:layout_width="199dp"
+                        android:layout_height="38dp"
+                        android:id="@+id/toSpinner"
+                        android:layout_marginLeft="170dp"
+                        android:layout_marginTop="-30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp" />
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:ems="10"
+                        android:id="@+id/toMultiline"
+                        android:minHeight="5dp"
+                        android:scrollbars="vertical"
+                        android:isScrollContainer="false"/>
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select Pitch and Speed"
+                        android:id="@+id/checkBox_ps"
+                        android:checked="false"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="30dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:layout_marginTop="50dp"
+                        android:background="#FFFF9034">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.50"
+                            android:weightSum="1"
+                            android:background="#FFFF9034">
+
+                            <ImageButton
+                                android:layout_width="84dp"
+                                android:layout_height="76dp"
+                                android:id="@+id/imageButton1_speakout"
+                                android:layout_gravity="center_horizontal"
+                                android:background="#FFFF9034"
+                                android:src="@drawable/app_speak"
+                                android:layout_weight="1.24"
+                                android:adjustViewBounds="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.50"
+                            android:weightSum="1"
+                            android:background="#FFFF9034">
+
+                            <ImageButton
+                                android:layout_width="84dp"
+                                android:layout_height="76dp"
+                                android:id="@+id/imageButton2_clear"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1.24"
+                                android:src="@drawable/app_clear"
+                                android:background="#FFFF9034"
+                                android:adjustViewBounds="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical"
+                    android:isScrollContainer="false">
+
+               <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:isScrollContainer="false">
+
+                    <LinearLayout
+                        android:id="@+id/helpLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:scrollbars="vertical"
+                        android:isScrollContainer="false">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:id="@+id/textView1"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="40dp"
+                            android:scrollbars="vertical"
+                            android:isScrollContainer="false"
+                            android:background="#FFFF9034" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="15dp"
+                            android:text="\n1.This app is Multi-Language translator App which lets you convert text(such as phrases,paragraphs,individual words) to speech using Google Text-To-Speech Engine on your Android smartphone.
+
+                \n2.This app can be used for Education,Travel Helper,Reading Books and References and also for fun.
+                \n3.It also can serve as a speaking aid helping people with speech disabilities to express themselves.It is a multi-language translator app."
+                            android:id="@+id/dtext" android:scrollbars="vertical"
+                            android:isScrollContainer="false"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="15dp"
+                            android:text="Features"
+                            android:gravity="center"
+                            android:id="@+id/textView2"
+                            android:layout_below="@+id/textView1"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="50dp"
+                            android:scrollbars="vertical"
+                            android:isScrollContainer="false" android:background="#FFFF9034"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="15dp"
+                            android:text="\n1.Support for around 64 multi-national languages.
+                    \n2.Support for around 64 multi-national languages.
+                    \n3.capability to adjust Pitch and Speed for different type of speech outputs."
+                            android:id="@+id/ftext" android:scrollbars="vertical"
+                            android:isScrollContainer="false"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="15dp"
+                            android:text="How To Use ?"
+                            android:gravity="center"
+                            android:id="@+id/textView3"
+                            android:layout_below="@+id/textView2"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="46dp"
+                            android:scrollbars="vertical"
+                            android:isScrollContainer="false" android:background="#FFFF9034"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="15dp"
+                            android:text="\n1.Launch the app.\n2.From the drop down menu choose the language (Translate From ) from which you want to translate from.
+                    \n3.Enter your text.
+
+                    \n4.From the drop down menu choose the language (Translate To ) to which you want to make translation.
+                    \n5.It displays the text in translated language.
+                    \n6.Tap on the microphone icon to speak out the spoken text or number to listen from text.
+                    \n6.To enter text in a different language go to Settings -> Language and Input -> Keyboard and Input methods -> Google Keyboard -> Languages. Choose the language in which you want to enter text.
+                    \n7.Tap on the microphone icon to write any text or number you want to listen from text.
+                    \n8.Choose pitch and speed of the speech output.
+                    \n9.Delete whole text with Delete icon."
+                            android:id="@+id/htext" android:scrollbars="vertical"
+                            android:isScrollContainer="false"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="15dp"
+                            android:text="Notes"
+                            android:gravity="center"
+                            android:id="@+id/textView4"
+                            android:layout_below="@+id/textView3"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="64dp"
+                            android:scrollbars="vertical"
+                            android:isScrollContainer="false" android:background="#FFFF9034"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textSize="15dp"
+                            android:text="\n1.Your phone must have a Text-to-Speech engine for TranslateCentral to work.
+                        \n2.If this is not present you can download it from Google Play Store.
+                        \n3.Depending on the TTS engine, some languages that appear in the app may not work.\n\n."
+                            android:id="@+id/ntext" android:scrollbars="vertical"
+                            android:isScrollContainer="false"/>
+                    </LinearLayout>
+                </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:text="Rate Me!!"
+                        android:textColor="#ffffffff"
+                        android:id="@+id/button_Rate"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFF9034"
+                        android:layout_weight="1.24"
+                        android:adjustViewBounds="true"
+                        android:capitalize="none" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:text="Email : pingmobileapps4fun@gmail.com"
+                        android:textSize="15dp"
+                        android:id="@+id/textView_email" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
+
+
